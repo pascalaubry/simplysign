@@ -31,6 +31,6 @@ jobs:
       - name: Sign EXE
         run: Write-Output "$env:SIGNTOOL_DIR"
         # prints out the absolute path to the located signtool executable
-        shell: pwsh
+        shell: powershell
         env:
           SIGNTOOL_DIR: ${{ steps.signtool.outputs.signtool-x64 }}
