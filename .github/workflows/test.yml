@@ -23,4 +23,4 @@ jobs:
       - name: Create EXE
         shell: powershell
         run: |
-          python scripts/hello.py
+          python scripts/create_exe.py
