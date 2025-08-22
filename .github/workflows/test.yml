@@ -17,10 +17,10 @@ jobs:
         with:
           python-version: 3.12
       - name: Install dependencies
-        shell: pwsh
+        shell: powershell
         run: |
           pip install -e .
       - name: Create EXE
-        shell: pwsh
+        shell: powershell
         run: |
           python scripts/hello.py
