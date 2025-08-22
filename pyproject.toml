@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools >= 75.5.0", "requests ~= 2.32.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simplysign"
+description = "An application to try to sign an EXE with a self-hosted GitHub action runner"
+requires-python = ">=3.12.0"
+version = "0.1"
+
+dependencies = [
+    "PyInstaller",
+]

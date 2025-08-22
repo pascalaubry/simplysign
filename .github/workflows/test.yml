@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  status
+
+jobs:
+  main:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+      - name: Setup Python
+        uses: actions/setup-python@v5.5.0
+        with:
+          python-version: 3.12
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          pip install -e .
+      - name: Create EXE
+        shell: pwsh
+        run: |
+          python hello.py
