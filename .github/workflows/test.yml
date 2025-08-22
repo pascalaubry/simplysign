@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-python@v5.5.0
         with:
           python-version: 3.12
-      - name: Install dependencies
+      - name: Install Python dependencies
         shell: powershell
         run: |
-          pip install -e .
+          pip install -e .[scripts]
       - name: Create EXE
         shell: powershell
         run: |
