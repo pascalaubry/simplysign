@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
+      - name: Allow PowerShell to run unsigned scripts  # https://github.com/actions/runner/issues/686
+        shell: cmd
+        run: powershell -Command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
       - name: Setup Python
         uses: actions/setup-python@v5.5.0
         with:
