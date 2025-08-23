@@ -29,6 +29,9 @@ jobs:
         uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
         with:
           sdk-version: 26100
+      - name: Run Explorer
+        shell: powershell
+        run: explorer
       - name: Run SignTool
         shell: powershell
         run: signtool
