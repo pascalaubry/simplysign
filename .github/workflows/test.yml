@@ -29,9 +29,6 @@ jobs:
         uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
         with:
           sdk-version: 26100
-      - name: Sign EXE
-        run: Write-Output "$env:SIGNTOOL_DIR"
-        # prints out the absolute path to the located signtool executable
+      - name: Run SignTool
         shell: powershell
-        env:
-          SIGNTOOL_DIR: ${{ steps.signtool.outputs.signtool-x64 }}
+        run: signtool
