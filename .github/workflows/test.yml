@@ -19,15 +19,14 @@ jobs:
       - name: Install Python dependencies
         shell: powershell
         run: |
+          python -m pip install --upgrade pip
           pip install -e .[scripts]
       - name: Create EXE
         shell: powershell
         run: |
           python scripts/create_exe.py
-      - name: Setup SignTool
-        uses: KamaranL/add-signtool-action@v1
-        id: signtool
-
+      - name: Setup Windows SDK
+        uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
       - name: Sign EXE
         run: Write-Output "$env:SIGNTOOL_DIR"
         # prints out the absolute path to the located signtool executable
