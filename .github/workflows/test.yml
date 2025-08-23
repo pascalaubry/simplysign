@@ -31,7 +31,7 @@ jobs:
           sdk-version: 26100
       - name: Run Explorer
         shell: powershell
-        run: explorer C:\Program Files (x86)\Windows Kits\10\bin
+        run: explorer
       - name: Run Explorer
         shell: powershell
         run: dir "C:\Program Files (x86)\Windows Kits\10\bin"
