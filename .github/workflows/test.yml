@@ -31,7 +31,10 @@ jobs:
           sdk-version: 26100
       - name: Run Explorer
         shell: powershell
-        run: explorer
+        run: explorer C:\Program Files (x86)\Windows Kits\10\bin
+      - name: Run Explorer
+        shell: powershell
+        run: dir "C:\Program Files (x86)\Windows Kits\10\bin"
       - name: Run SignTool
         shell: powershell
         run: signtool
